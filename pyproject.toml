@@ -1,0 +1,32 @@
+[project]
+name = "proxychains"
+version = "0.3.0"
+description = "Tag-matched proxy chain egress: pool loading (file/URL), loopback forwarders, pinned exits, rotation, per-verdict quarantine. Stdlib-only."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "prog76" }]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: Proxy Servers",
+]
+
+[project.urls]
+Homepage = "https://github.com/prog76/pip_proxy-chains"
+Repository = "https://github.com/prog76/pip_proxy-chains"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
